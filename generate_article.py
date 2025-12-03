@@ -71,8 +71,10 @@ def slugify(title: str) -> str:
         .replace("'", "")
         .replace("\"", "")
         .replace("/", "-")
+        .replace("*", "")
     )
     return slug
+
 
 def make_front_matter(title: str, slug: str, date_str: str) -> str:
     fm = f"""---

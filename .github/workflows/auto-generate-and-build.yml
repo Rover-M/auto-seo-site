@@ -2,8 +2,10 @@ name: Generate AI article and build site
 
 on:
   schedule:
-    - cron: "0 7 * * *"  # iga päev 07:00 UTC
+    - cron: "0 7 * * *"   # iga päev 07:00 UTC
+    - cron: "0 19 * * *"  # iga päev 19:00 UTC
   workflow_dispatch: {}
+
 
 jobs:
   build:
