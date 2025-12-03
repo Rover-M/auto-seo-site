@@ -6,17 +6,33 @@ import textwrap
 import pathlib
 
 KEYWORDS = [
-    "best productivity tools for students",
-    "how to choose a mechanical keyboard",
-    "budget noise cancelling headphones 2025",
-    "best note taking apps for android",
-    "how to improve focus while studying",
-    "standing desk benefits for programmers",
-    "how to set up a home office",
-    "best apps for time management",
-    "focus techniques for programmers",
-    "lightweight laptops for travel"
+    "best ai tools for students in 2025",
+    "ai tools for youtube content creators",
+    "best ai writing tools for bloggers",
+    "best task management apps for remote workers",
+    "ai tools for video editing beginners",
+    "ai tools for editing youtube thumbnails",
+    "best note taking apps for university students",
+    "best password managers for beginners",
+    "best vpn for digital nomads 2025",
+    "lightweight laptops for remote work under 1000",
+    "best standing desks for home office",
+    "ergonomic office chairs for programmers",
+    "best microphones for podcasting on a budget",
+    "affordable cameras for youtube beginners",
+    "ai tools for social media scheduling",
+    "best chrome extensions for productivity",
+    "ai tools to summarize long articles",
+    "best time tracking apps for freelancers",
+    "ai tools for learning languages faster",
+    "ai tools to improve focus and block distractions",
+    "best budget noise cancelling headphones for work",
+    "ai tools for creating online courses",
+    "ai tools for designing logos and branding",
+    "best cloud storage options for students",
+    "ai tools to automate repetitive computer tasks"
 ]
+
 
 def pick_topic() -> str:
     return random.choice(KEYWORDS)
