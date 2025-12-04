@@ -327,7 +327,8 @@ SIDEBAR_HTML = """
   <h3>Save on fuel across Europe</h3>
   <p>Compare fuel card offers and get better diesel prices for your fleet.</p>
   <p><a href="https://your-fuel-card-partner-link.com" target="_blank" rel="nofollow noopener">Check fuel card partners →</a></p>
-  <p class="small-note">Affiliate link – helps support this automated site.</p>
+    <p class="small-note">Affiliate link – we may earn a commission at no extra cost to you.</p>
+
 </div>
 
 <div class="ad-block">
@@ -373,7 +374,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
     </aside>
   </div>
   <footer>
-    &copy; {year} Fuel Cards &amp; Road Tolls Guide. This site is generated automatically using AI-written content.
+    &copy; {year} Fuel Cards &amp; Road Tolls Guide. Informational content only – not legal or financial advice.
   </footer>
 </body>
 </html>
@@ -476,7 +477,7 @@ def build_index_page(posts: List[Dict[str, Any]]):
 <div class="hero-intro">
   <div class="badge">Automated knowledge base</div>
   <h2>Save on diesel, tolls and admin work.</h2>
-  <p>We publish AI-generated, human-checked guides for Baltic and European trucking companies. Topics include fuel cards, road tolls, compliance and fleet optimisation.</p>
+  <p>We publish practical guides for Baltic and European trucking companies. Topics include fuel cards, road tolls, compliance and fleet optimisation.</p>
 </div>
 
 <h2>Latest guides</h2>
