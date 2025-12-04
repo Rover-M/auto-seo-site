@@ -1,53 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>All posts</title>
+  <meta charset="UTF-8" />
+  <title>All guides | Fuel Cards & Road Tolls Guide</title>
+  <meta name="description" content="All guides about fuel cards, road tolls and trucking cost optimisation in Europe." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 16px;
-      line-height: 1.6;
-    }
-    a {
-      color: #2563eb;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    h1, h2, h3 {
-      margin-top: 1.4em;
-    }
-    .post-meta {
-      color: #6b7280;
-      font-size: 0.9em;
-      margin-bottom: 1em;
-    }
+  
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #0b1020;
+    color: #f5f5f5;
+}
+
+a {
+    color: #4fd1c5;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background: #050816;
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+header p {
+    margin: 0.3rem 0 0;
+    color: #a0aec0;
+    max-width: 700px;
+}
+
+.layout {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 1.5rem;
+}
+
+main {
+    flex: 1;
+    max-width: 840px;
+    background: rgba(15,23,42,0.9);
+    border-radius: 14px;
+    padding: 1.5rem 1.7rem;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.45);
+}
+
+aside {
+    width: 280px;
+    flex-shrink: 0;
+    background: rgba(15,23,42,0.9);
+    border-radius: 14px;
+    padding: 1.2rem 1.4rem;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.45);
+    position: sticky;
+    top: 1.5rem;
+    max-height: calc(100vh - 3rem);
+    overflow-y: auto;
+}
+
+footer {
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #a0aec0;
+}
+
+.post-meta {
+    font-size: 0.9rem;
+    color: #a0aec0;
+    margin-bottom: 0.7rem;
+}
+
+.post-list-item {
+    padding: 1rem 1rem 0.8rem 1rem;
+    margin-bottom: 0.7rem;
+    border-radius: 10px;
+    background: rgba(15,23,42,0.85);
+    border: 1px solid rgba(148,163,184,0.25);
+}
+
+.post-list-item h2 {
+    margin: 0 0 0.3rem 0;
+    font-size: 1.1rem;
+}
+
+.post-list-item p {
+    margin: 0.3rem 0 0.2rem 0;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+}
+
+.chip {
+    display: inline-block;
+    font-size: 0.75rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    border: 1px solid rgba(148,163,184,0.6);
+    color: #e2e8f0;
+    margin-top: 0.2rem;
+}
+
+.post-content h1, .post-content h2, .post-content h3 {
+    color: #e2e8f0;
+}
+
+.post-content h1 {
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+}
+
+.post-content h2, .post-content h3 {
+    margin-top: 1.2rem;
+}
+
+.post-content p {
+    line-height: 1.6;
+    color: #cbd5e1;
+}
+
+.post-content ul, .post-content ol {
+    padding-left: 1.2rem;
+}
+
+.badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.12rem 0.5rem;
+    border-radius: 999px;
+    background: rgba(79,209,197,0.16);
+    color: #4fd1c5;
+    margin-bottom: 0.4rem;
+}
+
+.hero-intro {
+    margin-bottom: 1.4rem;
+}
+
+.hero-intro h2 {
+    margin: 0 0 0.4rem 0;
+    font-size: 1.4rem;
+}
+
+.hero-intro p {
+    margin: 0;
+    color: #cbd5e1;
+}
+
+.related-list {
+    margin-top: 2.2rem;
+    border-top: 1px solid rgba(148,163,184,0.35);
+    padding-top: 1.2rem;
+}
+
+.related-list h3 {
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+}
+
+.related-list ul {
+    padding-left: 1.1rem;
+}
+
+.ad-block {
+    border-radius: 12px;
+    padding: 0.85rem 0.95rem;
+    margin-bottom: 0.8rem;
+    background: linear-gradient(135deg, rgba(56,189,248,0.18), rgba(79,209,197,0.08));
+    border: 1px solid rgba(148,163,184,0.5);
+    font-size: 0.9rem;
+}
+
+.ad-block h3 {
+    margin: 0 0 0.3rem 0;
+    font-size: 0.95rem;
+}
+
+.ad-block p {
+    margin: 0.2rem 0;
+}
+
+.small-note {
+    font-size: 0.8rem;
+    color: #a0aec0;
+    margin-top: 0.4rem;
+}
+
+.nav-links {
+    margin-top: 0.7rem;
+    font-size: 0.9rem;
+}
+
+.nav-links a {
+    margin-right: 0.6rem;
+    color: #e2e8f0;
+}
+
   </style>
 </head>
 <body>
   <header>
-    <h1><a href="/auto-seo-site/">AI SEO Site</a></h1>
-    <p>Automatically growing AI-generated content.</p>
-    <p><a href="/auto-seo-site/posts.html">All posts</a></p>
+    <h1>Fuel Cards & Road Tolls Guide</h1>
+    <p>Practical guides for Baltic and European trucking companies to save on fuel and road tolls.</p>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="posts.html">All guides</a>
+    </div>
   </header>
-  <main>
-  
-<h1>All posts</h1>
-<ul>
-<li><a href="/auto-seo-site/posts/fuel-saving-tips-for-small-trucking-fleets-in-2025.html">fuel saving tips for small trucking fleets in 2025</a> <span class="post-meta">(2025-12-04 06:52:19)</span></li>
-<li><a href="/auto-seo-site/posts/ai-tools-for-learning-languages-faster-your-ultimate-guide-to-mastering-new-languages-in-record-time.html">AI Tools for Learning Languages Faster: Your Ultimate Guide to Mastering New Languages in Record Time</a> <span class="post-meta">(2025-12-04)</span></li>
-<li><a href="/auto-seo-site/posts/ai-tools-to-improve-focus-and-block-distractions-boost-productivity-in-2024.html">AI Tools to Improve Focus and Block Distractions: Boost Productivity in 2024</a> <span class="post-meta">(2025-12-03)</span></li>
-<li><a href="/auto-seo-site/posts/best-ai-writing-tools-for-bloggers-in-2024-boost-your-content-creation.html">Best AI Writing Tools for Bloggers in 2024: Boost Your Content Creation</a> <span class="post-meta">(2025-12-03)</span></li>
-<li><a href="/auto-seo-site/posts/the-best-budget-podcasting-microphones-affordable-gear-for-crystal-clear-audio.html">The Best Budget Podcasting Microphones: Affordable Gear for Crystal-Clear Audio</a> <span class="post-meta">(2025-12-03)</span></li>
-<li><a href="/auto-seo-site/posts/the-ultimate-guide-to-ai-tools-for-social-media-scheduling-in-2024.html">The Ultimate Guide to AI Tools for Social Media Scheduling in 2024</a> <span class="post-meta">(2025-12-03)</span></li>
-<li><a href="/auto-seo-site/posts/the-ultimate-guide-to-ergonomic-office-chairs-for-programmers-comfort-meets-productivity.html">The Ultimate Guide to Ergonomic Office Chairs for Programmers: Comfort Meets Productivity</a> <span class="post-meta">(2025-12-03)</span></li>
+  <div class="layout">
+    <main>
+      <h2>All trucking, fuel & toll guides</h2>
+<p>Browse every article generated by the system. New guides are added automatically over time.</p>
 
-</ul>
 
-  </main>
+<div class="post-list-item">
+  <div class="chip">Guide</div>
+  <h2><a href="posts/best-fuel-cards-for-international-trucking-companies-in-2025.html">best fuel cards for international trucking companies in 2025</a></h2>
+  <div class="post-meta">2025-12-04 06:59:57</div>
+  <p>Recommended fuel &amp;amp; toll partners If you're looking for practical ways to save on fuel and road tolls across Europe, here are some partners to check out: Example Fuel Card Partner Example Toll Management Service...</p>
+</div>
+
+
+<div class="post-list-item">
+  <div class="chip">Guide</div>
+  <h2><a href="posts/fuel-saving-tips-for-small-trucking-fleets-in-2025.html">fuel saving tips for small trucking fleets in 2025</a></h2>
+  <div class="post-meta">2025-12-04 06:52:19</div>
+  <p>Recommended fuel &amp;amp; toll partners If you're looking for practical ways to save on fuel and road tolls across Europe, here are some partners to check out: Example Fuel Card Partner Example Toll Management Service...</p>
+</div>
+
+
+<div class="post-list-item">
+  <div class="chip">Guide</div>
+  <h2><a href="posts/ai-tools-for-learning-languages-faster-your-ultimate-guide-to-mastering-new-languages-in-record-time.html">AI Tools for Learning Languages Faster: Your Ultimate Guide to Mastering New Languages in Record Time</a></h2>
+  <div class="post-meta">2025-12-04</div>
+  <p>H1: AI Tools for Learning Languages Faster: Your Ultimate Guide to Mastering New Languages in Record Time Learning a new language can feel like climbing a mountain—daunting, time-consuming, and sometimes frustrating....</p>
+</div>
+
+
+<div class="post-list-item">
+  <div class="chip">Guide</div>
+  <h2><a href="posts/ai-tools-to-improve-focus-and-block-distractions-boost-productivity-in-2024.html">AI Tools to Improve Focus and Block Distractions: Boost Productivity in 2024</a></h2>
+  <div class="post-meta">2025-12-03</div>
+  <p>The Modern Focus Crisis: Why Distractions Win In today’s hyper-connected world, maintaining concentration feels like an uphill battle. Notifications ping, social media scrolls endlessly, and endless tabs compete for...</p>
+</div>
+
+
+<div class="post-list-item">
+  <div class="chip">Guide</div>
+  <h2><a href="posts/best-ai-writing-tools-for-bloggers-in-2024-boost-your-content-creation.html">Best AI Writing Tools for Bloggers in 2024: Boost Your Content Creation</a></h2>
+  <div class="post-meta">2025-12-03</div>
+  <p>Introduction: The AI Revolution in Blogging The digital publishing landscape is evolving rapidly, and artificial intelligence (AI) is no longer a futuristic concept – it’s a powerful ally for bloggers today. For...</p>
+</div>
+
+
+<div class="post-list-item">
+  <div class="chip">Guide</div>
+  <h2><a href="posts/the-best-budget-podcasting-microphones-affordable-gear-for-crystal-clear-audio.html">The Best Budget Podcasting Microphones: Affordable Gear for Crystal-Clear Audio</a></h2>
+  <div class="post-meta">2025-12-03</div>
+  <p>Creating a professional-sounding podcast doesn’t require breaking the bank. With the right microphone, even creators on a tight budget can produce high-quality audio that engages listeners. This guide walks you...</p>
+</div>
+
+
+<div class="post-list-item">
+  <div class="chip">Guide</div>
+  <h2><a href="posts/the-ultimate-guide-to-ai-tools-for-social-media-scheduling-in-2024.html">The Ultimate Guide to AI Tools for Social Media Scheduling in 2024</a></h2>
+  <div class="post-meta">2025-12-03</div>
+  <p>Managing multiple social media accounts, crafting engaging content, and determining the perfect posting time can feel like a full-time job. Enter AI-powered social media scheduling tools – game-changers that use...</p>
+</div>
+
+
+<div class="post-list-item">
+  <div class="chip">Guide</div>
+  <h2><a href="posts/the-ultimate-guide-to-ergonomic-office-chairs-for-programmers-comfort-meets-productivity.html">The Ultimate Guide to Ergonomic Office Chairs for Programmers: Comfort Meets Productivity</a></h2>
+  <div class="post-meta">2025-12-03</div>
+  <p>Introduction For programmers, comfort and focus are non-negotiable. Hours spent hunched over a screen, typing relentlessly, can take a serious toll on the body if proper support isn’t prioritized. An ergonomic office...</p>
+</div>
+    </main>
+    <aside>
+      
+<div class="ad-block">
+  <h3>Save on fuel across Europe</h3>
+  <p>Compare fuel card offers and get better diesel prices for your fleet.</p>
+  <p><a href="https://your-fuel-card-partner-link.com" target="_blank" rel="nofollow noopener">Check fuel card partners →</a></p>
+  <p class="small-note">Affiliate link – helps support this automated site.</p>
+</div>
+
+<div class="ad-block">
+  <h3>Automate toll payments</h3>
+  <p>Use a single toll device for multiple EU countries and reduce admin overhead.</p>
+  <p><a href="https://your-toll-partner-link.com" target="_blank" rel="nofollow noopener">View toll management options →</a></p>
+</div>
+
+<div class="ad-block">
+  <h3>Need help with fines?</h3>
+  <p>Some service providers can handle Polish and German toll fines for you.</p>
+  <p><em>(Place your partner or lead form link here later.)</em></p>
+</div>
+
+    </aside>
+  </div>
+  <footer>
+    &copy; 2025 Fuel Cards &amp; Road Tolls Guide. This site is generated automatically using AI-written content.
+  </footer>
 </body>
 </html>
