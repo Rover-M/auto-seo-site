@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rover-m.github.io/auto-seo-site/sitemap.xml
