@@ -12,6 +12,7 @@ CONTENT_DIR = BASE_DIR / "content" / "posts"
 DOCS_DIR = BASE_DIR / "docs"
 POSTS_OUTPUT_DIR = DOCS_DIR / "posts"
 
+BASE_PATH = "/auto-seo-site"
 
 SITE_TITLE = "Fuel Cards & Road Tolls Guide"
 SITE_TAGLINE = "Practical guides for Baltic and European trucking companies to save on fuel and road tolls."
@@ -359,8 +360,8 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
     <h1>{site_title}</h1>
     <p>{site_tagline}</p>
     <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="posts.html">All guides</a>
+      <a href="{base_path}/index.html">Home</a>
+      <a href="{base_path}/posts.html">All guides</a>
     </div>
   </header>
   <div class="layout">
@@ -437,6 +438,7 @@ def build_post_pages(posts: List[Dict[str, Any]]):
             main_html=main_html,
             sidebar_html=SIDEBAR_HTML,
             year=year_now,
+            base_path=BASE_PATH,
         )
 
         out_path = POSTS_OUTPUT_DIR / f"{slug}.html"
@@ -494,6 +496,7 @@ def build_index_page(posts: List[Dict[str, Any]]):
         main_html=main_html,
         sidebar_html=SIDEBAR_HTML,
         year=year_now,
+        base_path=BASE_PATH,
     )
 
     out_path = DOCS_DIR / "index.html"
@@ -543,6 +546,7 @@ def build_posts_list_page(posts: List[Dict[str, Any]]):
         main_html=main_html,
         sidebar_html=SIDEBAR_HTML,
         year=year_now,
+        base_path=BASE_PATH,
     )
 
     out_path = DOCS_DIR / "posts.html"
