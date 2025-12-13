@@ -1,6 +1,6 @@
 ---
 title: "beginner's guide to European road toll systems for new trucking companies in 2025"
-date: "2025-12-04 19:18:07"
+date: "2025-12-13 19:17:21"
 slug: "beginner-s-guide-to-european-road-toll-systems-for-new-trucking-companies-in-2025"
 ---
 
